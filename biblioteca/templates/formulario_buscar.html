@@ -1,0 +1,17 @@
+<html>
+<head>
+  <title>Buscar</title>
+</head>
+<body>
+    {% if errors %}
+      <ul>
+        {% for error in errors %}
+        <p style="color:red;">{{ error }}</p>
+        {% endfor %}
+    {% endif %}
+    <form action='/buscar/' method='get'>
+      <input type="text" name="q">
+      <input type="submit" value="Buscar">
+    </form>
+  </body>
+  </html>
