@@ -16,9 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from biblioteca import views
+from contactos.views import contactos
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^formulario-buscar/$', views.formulario_buscar),
-    url(r'^buscar/$', views.buscar)
+    url(r'^buscar/$', views.buscar),
+    url(r'^contactos/$', contactos),
 ]
