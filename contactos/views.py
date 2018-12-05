@@ -20,7 +20,7 @@ def contactos(request):
             )
             return HttpResponseRedirect('/contactos/gracias/')
     else:
-        form = FormularioContactos()
+        form = FormularioContactos(initial={'asunto': '¡Adoro tu sitio!'})
     return render(request, 'formulario_contactos.html', {'form':form })
 
 
