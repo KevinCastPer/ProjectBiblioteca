@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'biblioteca'
+    'biblioteca',
+    'contactos',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,13 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = 'media/'
 
 MEDIA_URL = 'http//localhost:8000/media/'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# para Consola
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#para dummy
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
