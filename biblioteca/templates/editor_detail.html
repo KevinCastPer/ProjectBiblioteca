@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Editor: {{ editor.nombre }}</h2>
+<ul>
+  <li>Domicilio: {{ editor.domicilio }}</li>
+  <li>Ciudad: {{ editor.ciudad }}</li>
+  <li>Estado: {{ editor.estado }}</li>
+  <li>Pais: {{ editor.pais }}</li>
+  <li>Sitio web: {{ editor.website }}</li>
+</ul>
+<p><a href="{% url 'lista­-editores' %}">Lista de editores</a></p>
+<p><a href="{% url 'lista­-libros-­editor' editor.nombre %}">Libros publicados</a></p>
+
+{% endblock %}
